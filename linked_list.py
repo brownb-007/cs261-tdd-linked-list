@@ -16,4 +16,10 @@ class LinkedList:
 
     def is_sentinel(self):
         return self.value == None
+
+    def is_empty(self):
+        if self.next != self or self.prev != self:
+            return False
+        else:
+            return True
     pass
