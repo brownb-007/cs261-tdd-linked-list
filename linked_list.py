@@ -22,4 +22,8 @@ class LinkedList:
             return False
         else:
             return True
+
+    def is_last(self):
+        return self.next.is_sentinel()
+
     pass
