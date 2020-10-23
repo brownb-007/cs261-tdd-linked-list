@@ -39,5 +39,8 @@ class LinkedList:
            self = self.last()
            self.next = attach_new_node
            attach_new_node.prev = self
+           return
+        else:
+            self.next.append(attach_new_node)
 
     pass
