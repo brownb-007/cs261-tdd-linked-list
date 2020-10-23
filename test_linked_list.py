@@ -285,24 +285,24 @@ class TestLinkedList(unittest.TestCase):
         self.assertEqual(third_node, fourth_node.prev)
         self.assertEqual(fourth_node, third_node.next)
 
-    # """
-    # Deletion
-    # """
+    """
+    Deletion
+    """
 
-    # def test_delete(self):
-    #     """
-    #     Deleting a node from the middle of a list removes it from the list.
-    #     """
-    #     ll = LinkedList()
-    #     second_node = LinkedList(fake_value())
-    #     third_node = LinkedList(fake_value())
-    #     fourth_node = LinkedList(fake_value())
-    #     ll.append(second_node)
-    #     ll.append(third_node)
-    #     ll.append(fourth_node)
-    #     third_node.delete()
-    #     self.assertEqual(fourth_node, second_node.next)
-    #     self.assertEqual(second_node, fourth_node.prev)
+    def test_delete(self):
+        """
+        Deleting a node from the middle of a list removes it from the list.
+        """
+        ll = LinkedList()
+        second_node = LinkedList(fake_value())
+        third_node = LinkedList(fake_value())
+        fourth_node = LinkedList(fake_value())
+        ll.append(second_node)
+        ll.append(third_node)
+        ll.append(fourth_node)
+        third_node.delete()
+        self.assertEqual(fourth_node, second_node.next)
+        self.assertEqual(second_node, fourth_node.prev)
 
     # """
     # Insertion

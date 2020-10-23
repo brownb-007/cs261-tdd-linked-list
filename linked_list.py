@@ -42,5 +42,9 @@ class LinkedList:
            return
         else:
             self.next.append(attach_new_node)
+    
+    def delete(self):
+        self.prev.next = self.next
+        self.next.prev = self.prev
 
     pass
