@@ -60,5 +60,10 @@ class LinkedList:
         self.next = inserted_node
         inserted_node.prev = self
     
+    def at(self, index):
+        retrieved_node = self
+        for i in range(index):
+            retrieved_node = retrieved_node.next
+        return retrieved_node
     
     pass
