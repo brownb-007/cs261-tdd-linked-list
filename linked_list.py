@@ -33,6 +33,12 @@ class LinkedList:
             return self.next.last()
 
     def append(self, attach_new_node):
+        if self.is_empty():
+            self.next = attach_new_node
+            self.prev = attach_new_node
+            attach_new_node.prev = self
+            attach_new_node.next = self
+            return
         if self.is_sentinel():
            self.prev = attach_new_node
            attach_new_node.next =  self
@@ -47,4 +53,12 @@ class LinkedList:
         self.prev.next = self.next
         self.next.prev = self.prev
 
+
+    def insert(self, inserted_node):
+        self.next.prev = inserted_node
+        inserted_node.next = self.next
+        self.next = inserted_node
+        inserted_node.prev = self
+    
+    
     pass
