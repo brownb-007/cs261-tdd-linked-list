@@ -343,29 +343,29 @@ class TestLinkedList(unittest.TestCase):
         self.assertEqual(third_node, ll.at(2))
         self.assertEqual(fourth_node, ll.at(3))
 
-    # """
-    # Search
-    # """
+    """
+    Search
+    """
 
-    # def test_search_returns_none_when_not_found(self):
-    #     """
-    #     Searching for a node with a particular value that does not exist in the
-    #     linked list returns None.
-    #     """
-    #     ll = LinkedList()
-    #     second_node = LinkedList("FAKE")
-    #     self.assertEqual(None, ll.search("X"))
+    def test_search_returns_none_when_not_found(self):
+        """
+        Searching for a node with a particular value that does not exist in the
+        linked list returns None.
+        """
+        ll = LinkedList()
+        second_node = LinkedList("FAKE")
+        self.assertEqual(None, ll.search("X"))
 
-    # def test_search_returns_node_when_found(self):
-    #     """
-    #     Searching for a node with a particular value returns that node, if it
-    #     exists in the linked list.
-    #     """
-    #     value = "FAKE"
-    #     ll = LinkedList()
-    #     second_node = LinkedList(value)
-    #     ll.append(second_node)
-    #     self.assertEqual(second_node, ll.search(value))
+    def test_search_returns_node_when_found(self):
+        """
+        Searching for a node with a particular value returns that node, if it
+        exists in the linked list.
+        """
+        value = "FAKE"
+        ll = LinkedList()
+        second_node = LinkedList(value)
+        ll.append(second_node)
+        self.assertEqual(second_node, ll.search(value))
 
     # """
     # Maintaining Order

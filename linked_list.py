@@ -60,10 +60,18 @@ class LinkedList:
         self.next = inserted_node
         inserted_node.prev = self
     
-    def at(self, index):
+    def at(self, value):
         retrieved_node = self
-        for i in range(index):
+        for i in range(value):
             retrieved_node = retrieved_node.next
         return retrieved_node
+         
+    def search(self, value):
+        if self.value == value:
+            return self
+        if self.is_last():
+            return None
+        else:
+            return self.next.search(value)
     
     pass
