@@ -73,5 +73,13 @@ class LinkedList:
             return None
         else:
             return self.next.search(value)
+
+    def insert_in_order(self, attach_new_node):
+        if self.is_empty():
+            self.append(attach_new_node)
+        elif self.next.value == None or attach_new_node.value < self.next.value:
+            self.insert(attach_new_node)
+        else:
+            return self.next.insert_in_order(attach_new_node)
     
     pass
