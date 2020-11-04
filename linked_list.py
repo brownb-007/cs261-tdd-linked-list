@@ -18,10 +18,7 @@ class LinkedList:
         return self.value == None
 
     def is_empty(self):
-        if self.next != self or self.prev != self:
-            return False
-        else:
-            return True
+        return (self.next == self and self.prev == self)
 
     def is_last(self):
         return self.next.is_sentinel()
@@ -39,7 +36,7 @@ class LinkedList:
             attach_new_node.prev = self
             attach_new_node.next = self
             return
-        if self.is_sentinel():
+        elif self.is_sentinel():
            self.prev = attach_new_node
            attach_new_node.next =  self
            self = self.last()
@@ -69,7 +66,7 @@ class LinkedList:
     def search(self, value):
         if self.value == value:
             return self
-        if self.is_last():
+        elif self.is_last():
             return None
         else:
             return self.next.search(value)
